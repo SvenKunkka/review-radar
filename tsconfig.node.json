@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "CommonJS",
+    "moduleResolution": "bundler",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "types": ["node"],
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "outDir": "out/main",
+    "baseUrl": ".",
+    "paths": {
+      "@types/*": ["src/types/*"],
+      "@db/*": ["src/db/*"],
+      "@adapters/*": ["src/adapters/*"],
+      "@pipeline/*": ["src/pipeline/*"],
+      "@services/*": ["src/services/*"],
+      "@llm/*": ["src/llm/*"],
+      "@prompts/*": ["src/prompts/*"]
+    }
+  },
+  "include": [
+    "electron.vite.config.*",
+    "src/main/**/*",
+    "src/preload/**/*",
+    "src/adapters/**/*",
+    "src/pipeline/**/*",
+    "src/services/**/*",
+    "src/db/**/*",
+    "src/llm/**/*",
+    "src/prompts/**/*",
+    "src/types/**/*"
+  ]
+}
