@@ -1,3 +1,7 @@
+<!-- SVENKUNKKA-README-NAV:BEGIN -->
+[中文项目说明](#project-overview-zh) · [English overview](#project-overview-en) · [维护者 X / Maintainer on X](https://x.com/Svenu1s5)
+<!-- SVENKUNKKA-README-NAV:END -->
+
 # Product Review Radar
 
 A cross-platform desktop app that aggregates user reviews from multiple public sources, filters ads/bots using a rule engine + LLM second-pass, and produces structured sentiment analysis.
@@ -290,3 +294,30 @@ Exports are saved to your Downloads folder.
 - **IPC channels**: `search:start`, `search:getJobs`, `reviews:get`, `analysis:get`, `export:results`, `search:progress` (event, not handler).
 - **LLM is optional and bounded**: Only called for borderline-scoring reviews and the final summary. A full search with 50 reviews typically makes 5–15 LLM calls.
 - **No cloud, no accounts**: All data stays on device.
+
+
+---
+
+<!-- SVENKUNKKA-PROJECT-INFO:BEGIN -->
+
+<a id="project-overview-zh"></a>
+## 中文项目说明
+
+汇集多个公开来源产品评论的桌面工具，采用规则筛查和可选模型复核生成结构化情感分析，并使用 SQLite 缓存，支持 JSON/CSV 导出。
+
+**使用入口：** 运行 `npm install`、`npm run rebuild`，复制 `.env.example` 为 `.env` 后按需配置服务，再用 `npm run dev` 启动。
+
+**范围说明：** 默认模型为模拟实现；未配置密钥时跳过 YouTube，Trustpilot 抓取受阻时可能返回占位评论，不能将这些内容当成真实用户证据。
+
+<a id="project-overview-en"></a>
+## English project overview
+
+A desktop tool that aggregates public product reviews, combines rule-based filtering with optional model review, produces structured sentiment analysis, caches results in SQLite and exports JSON/CSV.
+
+**Getting started:** Run `npm install` and `npm run rebuild`, copy `.env.example` to `.env`, configure the desired services, then launch with `npm run dev`.
+
+**Scope:** The model defaults to a mock. YouTube is skipped without a key, and blocked Trustpilot scraping may return placeholder reviews; these must not be treated as real user evidence.
+
+**仓库维护者 / Repository maintainer:** [SvenKunkka](https://github.com/SvenKunkka) · [X / Twitter](https://x.com/Svenu1s5)
+
+<!-- SVENKUNKKA-PROJECT-INFO:END -->
